@@ -1,7 +1,5 @@
 package com.fujitsu.fac.models;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +11,7 @@ import com.fujitsu.fac.dtos.AttendeeDTO;
 
 @Entity
 @Table(name = "attendee")
-public class Attendee implements Serializable {
-
-	private static final long serialVersionUID = -5537966793788391734L;
+public class Attendee {
 
 	@Id
 	@Column(name = "id")
@@ -50,13 +46,13 @@ public class Attendee implements Serializable {
 	}
 
 	public Attendee(AttendeeDTO attendeeDTO) {
-		this.firstName = attendeeDTO.getFirstName();
-		this.lastName = attendeeDTO.getLastName();
+		this.firstName = attendeeDTO.getfNme();
+		this.lastName = attendeeDTO.getlNme();
 		this.email = attendeeDTO.getEmail();
-		this.companyName = attendeeDTO.getCompanyName();
-		this.position = attendeeDTO.getPosition();
-		this.phoneNumber = attendeeDTO.getPhoneNumber();
-		this.mobileNumber = attendeeDTO.getMobileNumber();
+		this.companyName = attendeeDTO.getCompNme();
+		this.position = attendeeDTO.getPos();
+		this.phoneNumber = attendeeDTO.getPhne();
+		this.mobileNumber = attendeeDTO.getMobile();
 		this.role = attendeeDTO.getRole();
 	}
 

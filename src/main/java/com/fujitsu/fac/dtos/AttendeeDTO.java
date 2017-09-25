@@ -1,37 +1,33 @@
 package com.fujitsu.fac.dtos;
 
-import java.io.Serializable;
+public class AttendeeDTO {
 
-public class AttendeeDTO implements Serializable{
-
-	private static final long serialVersionUID = -7044804573538784169L;
-
-	private String firstName = "";
-	private String lastName = "";
+	private String fNme = "";
+	private String lNme = "";
 	private String email = "";
-	private String companyName = "";
-	private String position = "";
-	private String phoneNumber = "";
-	private String mobileNumber = "";
+	private String compNme = "";
+	private String pos = "";
+	private String phne = "";
+	private String mobile = "";
 	private String role = "";
 	
 	public AttendeeDTO() {
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getfNme() {
+		return fNme;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setfNme(String fNme) {
+		this.fNme = fNme;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getlNme() {
+		return lNme;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setlNme(String lNme) {
+		this.lNme = lNme;
 	}
 
 	public String getEmail() {
@@ -42,28 +38,36 @@ public class AttendeeDTO implements Serializable{
 		this.email = email;
 	}
 
-	public String getCompanyName() {
-		return companyName;
+	public String getCompNme() {
+		return compNme;
 	}
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
+	public void setCompNme(String compNme) {
+		this.compNme = compNme;
 	}
 
-	public String getPosition() {
-		return position;
+	public String getPos() {
+		return pos;
 	}
 
-	public void setPosition(String position) {
-		this.position = position;
+	public void setPos(String pos) {
+		this.pos = pos;
 	}
 
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getPhne() {
+		return phne;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhne(String phne) {
+		this.phne = phne;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
 
 	public String getRole() {
@@ -73,41 +77,6 @@ public class AttendeeDTO implements Serializable{
 	public void setRole(String role) {
 		this.role = role;
 	}
+
 	
-	public String getMobileNumber() {
-		return mobileNumber;
-	}
-
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-
-		sb.append("firstName: ");
-		sb.append(firstName);
-
-		sb.append(" | lastName: ");
-		sb.append(lastName);
-
-		sb.append(" | email: ");
-		sb.append(email);
-
-		sb.append(" | companyName: ");
-		sb.append(companyName);
-
-		sb.append(" | position: ");
-		sb.append(position);
-
-		sb.append(" | phoneNumber: ");
-		sb.append(phoneNumber);
-
-		sb.append(" | role: ");
-		sb.append(role);
-
-		return sb.toString();
-
-	}
 }
