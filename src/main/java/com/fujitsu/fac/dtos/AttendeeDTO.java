@@ -2,32 +2,22 @@ package com.fujitsu.fac.dtos;
 
 public class AttendeeDTO {
 
-	private String fNme = "";
-	private String lNme = "";
+	private String nme = "";
 	private String email = "";
 	private String compNme = "";
 	private String pos = "";
 	private String phne = "";
 	private String mobile = "";
-	private String role = "";
 	
 	public AttendeeDTO() {
 	}
-
-	public String getfNme() {
-		return fNme;
+	
+	public String getNme() {
+		return nme;
 	}
 
-	public void setfNme(String fNme) {
-		this.fNme = fNme;
-	}
-
-	public String getlNme() {
-		return lNme;
-	}
-
-	public void setlNme(String lNme) {
-		this.lNme = lNme;
+	public void setNme(String nme) {
+		this.nme = nme;
 	}
 
 	public String getEmail() {
@@ -69,14 +59,5 @@ public class AttendeeDTO {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
 	
 }

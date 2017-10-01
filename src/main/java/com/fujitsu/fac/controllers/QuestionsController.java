@@ -21,9 +21,6 @@ public class QuestionsController {
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/question/add")
 	public ResponseEntity<String> addQuestion(@RequestBody QuestionDTO questionDTO) {
-		
-		System.out.println("@ QuestionsController.addQuestion()");
-		System.out.println(questionDTO.toString());
 		try {
 			this.questionsService.saveQuestion(questionDTO);
 		} catch (Exception ex) {

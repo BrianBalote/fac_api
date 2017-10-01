@@ -18,12 +18,9 @@ public class Attendee {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "first_name")
-	private String firstName;
-
-	@Column(name = "last_name")
-	private String lastName;
-
+	@Column(name = "name")
+	private String name;
+	
 	@Column(name = "email")
 	private String email;
 
@@ -39,21 +36,16 @@ public class Attendee {
 	@Column(name = "mobile_number")
 	private String mobileNumber;
 
-	@Column(name = "role")
-	private String role;
-
 	public Attendee() {
 	}
 
 	public Attendee(AttendeeDTO attendeeDTO) {
-		this.firstName = attendeeDTO.getfNme();
-		this.lastName = attendeeDTO.getlNme();
+		this.name = attendeeDTO.getNme();
 		this.email = attendeeDTO.getEmail();
 		this.companyName = attendeeDTO.getCompNme();
 		this.position = attendeeDTO.getPos();
 		this.phoneNumber = attendeeDTO.getPhne();
 		this.mobileNumber = attendeeDTO.getMobile();
-		this.role = attendeeDTO.getRole();
 	}
 
 	public Long getId() {
@@ -62,22 +54,6 @@ public class Attendee {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -110,14 +86,6 @@ public class Attendee {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
 	}
 	
 	public String getMobileNumber() {
@@ -165,11 +133,8 @@ public class Attendee {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("firstName: ");
-		sb.append(firstName);
-
-		sb.append(" | lastName: ");
-		sb.append(lastName);
+		sb.append("name: ");
+		sb.append(name);
 
 		sb.append(" | email: ");
 		sb.append(email);
@@ -182,9 +147,6 @@ public class Attendee {
 
 		sb.append(" | phoneNumber: ");
 		sb.append(phoneNumber);
-
-		sb.append(" | role: ");
-		sb.append(role);
 
 		return sb.toString();
 	}

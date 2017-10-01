@@ -17,9 +17,9 @@ public class Question {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "u_id")
-	private Long uId;
+
+	@Column(name = "email")
+	private String email;
 	
 	@Column(name = "question")
 	private String question;
@@ -28,7 +28,7 @@ public class Question {
 	}
 	
 	public Question(QuestionDTO questionDto) {
-		this.uId = Long.valueOf(questionDto.getuId());
+		this.email = questionDto.getEmail();
 		this.question = questionDto.getQstn();
 	}
 
@@ -38,14 +38,6 @@ public class Question {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Long getuId() {
-		return uId;
-	}
-
-	public void setuId(Long uId) {
-		this.uId = uId;
 	}
 
 	public String getQuestion() {
@@ -93,8 +85,8 @@ public class Question {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("uId: ");
-		sb.append(uId);
+		sb.append("email: ");
+		sb.append(email);
 
 		sb.append(" | question: ");
 		sb.append(question);

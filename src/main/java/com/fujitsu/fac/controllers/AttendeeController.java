@@ -21,9 +21,6 @@ public class AttendeeController {
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/attendee/add")
 	public ResponseEntity<String> addAttendee(@RequestBody AttendeeDTO attendee) {
-		
-		System.out.println("@ AttendeeController.addAttendee()");
-		System.out.println(attendee.toString());
 		try {
 			this.attendeeService.addAttendee(attendee);
 		} catch (Exception ex) {

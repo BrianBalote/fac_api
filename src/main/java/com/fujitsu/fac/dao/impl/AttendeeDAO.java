@@ -21,9 +21,6 @@ public class AttendeeDAO implements IAttendeeDAO {
 	@Override
 	@Transactional
 	public void addAttendee(Attendee attendee) {
-
-		System.out.println("@ AttendeeDAO.addAttendee()");
-		System.out.println(attendee.toString());
 		try {
 			em.persist(attendee);
 		} catch (Exception e) {

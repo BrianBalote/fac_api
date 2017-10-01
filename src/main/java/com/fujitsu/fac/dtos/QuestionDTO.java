@@ -2,18 +2,19 @@ package com.fujitsu.fac.dtos;
 
 public class QuestionDTO {
 
-	public long uId;
+	public String email = "";
 	public String qstn = "";
 	
 	public QuestionDTO() {
 	}
 
-	public long getuId() {
-		return uId;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setuId(long uId) {
-		this.uId = uId;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getQstn() {

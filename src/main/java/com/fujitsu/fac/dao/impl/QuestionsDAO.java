@@ -20,9 +20,6 @@ public class QuestionsDAO implements IQuestionsDAO {
 
 	@Override
 	public void saveQuestion(Question question) {
-		
-		System.out.println("@ QuestionsDAO.saveQuestion()");
-		System.out.println(question.toString());
 		try {
 			em.persist(question);
 		}catch (Exception e) {
